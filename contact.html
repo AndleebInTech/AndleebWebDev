@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Expense Tracker</title>
-    
-    <link rel="stylesheet" href="contact.css">
+    <!-- Load only one CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Temporary inline styles until CSS loads */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .navbar { background: #f8f9fa; padding: 1rem; }
+        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+        #contact-form { display: grid; gap: 1rem; }
+        textarea { min-height: 150px; }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -15,35 +23,58 @@
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+            <!-- Add if you have this page -->
+            <li><a href="about_us.html">About Us</a></li>
         </ul>
     </nav>
 
     <!-- Main Content -->
-    <div class="container">
+    <main class="container">
         <h1>Contact Us</h1>
         <p>If you have any questions or need support, feel free to reach out to us!</p>
 
         <!-- Contact Form -->
-        <form id="contact-form">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+        <form id="contact-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            
             <button type="submit">Send Message</button>
         </form>
-    </div>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Subscription</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="newsletter.html">Subscription</a></li>
             </ul>
             <p>&copy; 2024 Expense Tracker | All Rights Reserved</p>
         </div>
     </footer>
-  <script src="script.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        // Basic form handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message!');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
