@@ -1,0 +1,160 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    color: #e6e1e1;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(https://www.shutterstock.com/shutterstock/photos/2032739561/display_1500/stock-photo-mobile-phone-app-for-money-budget-and-expense-tracking-concept-unrecognizable-woman-checking-her-2032739561.jpg); /* Replace with your image URL */
+    background-size: cover; 
+    background-position: center; 
+    padding: 50px 40px; 
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.navbar .logo a {
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.navbar .nav-links li a:hover {
+    color: #ff9900;
+}
+
+
+/* Main Container */
+.container {
+    width: 80%;
+    margin: 50px auto;
+    background-color:rgb(75, 71, 71);
+
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #050505;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    width: 300px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #131921;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff9900;
+}
+
+/* Expense List */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    text-align: left;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+ul li span {
+    font-weight: bold;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #423f40; 
+    
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-content ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-content ul li a:hover {
+    color: #ff9900;
+}
+
+.newsletter {
+    margin-top: 30px;
+}
+
+.newsletter input {
+    padding: 10px;
+    font-size: 1rem;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #131921;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #ff9900;
+}
